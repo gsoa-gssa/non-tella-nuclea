@@ -2,7 +2,9 @@
 
 namespace App\Models;
 
+use App\Mail\VerifyEmail;
 use App\Exports\SupporterExport;
+use Illuminate\Support\Facades\Mail;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -34,9 +36,9 @@ class Supporter extends Model
     /**
      * Send email verification to the supporter.
      */
-    public static function sendEmailVerification()
+    public function sendEmailVerificationNotification()
     {
-        
+        Mail::to($this->email)->send(new VerifyEmail($this));
     }
 
     /**
