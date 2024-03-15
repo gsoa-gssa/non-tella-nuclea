@@ -34,9 +34,9 @@ class Supporter extends Model
     /**
      * Send email verification to the supporter.
      */
-    public static function sendEmailVerification($supporter)
+    public static function sendEmailVerification()
     {
-        // Send email verification
+        
     }
 
     /**

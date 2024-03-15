@@ -61,7 +61,7 @@ class SupporterController extends Controller
         $supporter->save();
 
         if (config("petition")->email_verification) {
-            Supporter::sendEmailVerification($supporter);
+            $supporter->sendEmailVerificationNotification();
         }
 
         return redirect(config("petition")->thanks_url->{app()->getLocale()} )->with("supporter", $supporter);
