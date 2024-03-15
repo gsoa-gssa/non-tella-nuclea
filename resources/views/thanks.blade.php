@@ -5,8 +5,7 @@
     <div class="tpnw-petition-text px-2 md:px-4 py-8">
         <div class="tpnw-petition-text__content max-w-[793px] mx-auto text-white text-2xl">
             {!!
-
-                \Illuminate\Support\Str::markdown(Storage::get("content/thx/" . app()->getLocale() . ".md"))
+                view("thanks." . app()->getLocale())
             !!}
             <x-share-box/>
             <div class="tpnw-petition-text__content__donate bg-white mt-16 p-4 md:p-6 text-black">
