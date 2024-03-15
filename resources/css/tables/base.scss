@@ -1,0 +1,23 @@
+table {
+    width: 100%;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    text-align: left;
+
+    tr {
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    td,
+    th {
+        padding: 0.5rem 1rem;
+    }
+
+    thead {
+        background-color: theme("colors.indigo.200");
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+}

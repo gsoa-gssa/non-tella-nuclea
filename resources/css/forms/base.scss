@@ -1,0 +1,50 @@
+.petition-supporter-form__form {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    @apply gap-3 md:gap-4;
+}
+
+.petition-input-group {
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="password"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1.6rem;
+    }
+
+    &__fullwidth {
+        grid-column: 1 / -1;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        border: 0;
+        border-radius: 5px;
+        font-size: 1.6rem;
+        cursor: pointer;
+        text-align: center;
+        background-color: grey;
+    }
+
+    &__error {
+        padding: 0.25rem;
+        font-size: 0.85rem;
+
+        @apply bg-red-100 border-red-500 text-red-700 mt-2 py-1 px-2;
+    }
+}
+
+
+.petition-backend-form {
+    select {
+        @apply border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block w-full;
+    }
+}

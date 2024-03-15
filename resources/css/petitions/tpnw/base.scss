@@ -1,0 +1,52 @@
+@import "./fonts.scss";
+@import "./form.scss";
+
+html {
+    background-color: black;
+}
+
+.tpnw-petition-text {
+    &__content {
+        p {
+            +p {
+                margin-top: 1rem;
+            }
+        }
+
+        b,
+        strong {
+            font-weight: 900;
+            color: theme("colors.accent");
+        }
+    }
+}
+
+.share-button {
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 0.5rem;
+    background-color: var(--button-color, theme("colors.black"));
+    color: var(--button-text-color, theme("colors.accent"));
+    text-align: center;
+    cursor: pointer;
+
+    &[data-share-type="whatsapp"] {
+        --button-color: #25d366;
+        --button-text-color: theme("colors.white");
+    }
+
+    &[data-share-type="facebook"] {
+        --button-color: #3b5998;
+        --button-text-color: theme("colors.white");
+    }
+
+    &[data-share-type="twitter"] {
+        --button-color: #1da1f2;
+        --button-text-color: theme("colors.white");
+    }
+
+    &[data-share-type="telegram"] {
+        --button-color: #0088cc;
+        --button-text-color: theme("colors.white");
+    }
+}

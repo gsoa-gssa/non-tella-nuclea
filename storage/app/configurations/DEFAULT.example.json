@@ -1,0 +1,55 @@
+{
+    "type": "domainbased",
+    "name": "default",
+    "langsetting": "domainbased",
+    "domains": {
+        "jetzt.atomwaffenverbot.ch": {
+            "lang": "de"
+        },
+        "maintenant.interdiction-armes-nucleaires.ch": {
+            "lang": "fr"
+        },
+        "ora.interdizione-armi-nucleari.ch": {
+            "lang": "it"
+        }
+    },
+    "fields": [
+        {
+            "name": "firstname",
+            "label": "Vorname",
+            "type": "text",
+            "required": true
+        },
+        {
+            "name": "lastname",
+            "label": "Nachname",
+            "type": "text",
+            "required": true
+        },
+        {
+            "name": "email",
+            "label": "E-Mail",
+            "type": "email",
+            "required": true
+        },
+        {
+            "name": "zip",
+            "label": "PLZ",
+            "type": "text",
+            "required": true
+        },
+        {
+            "name": "city",
+            "label": "Ort",
+            "type": "text",
+            "required": true
+        },
+        {
+            "name": "phone",
+            "label": "Telefonnummer",
+            "type": "text",
+            "required": false,
+            "placeholder": "optional"
+        }
+    ]
+}

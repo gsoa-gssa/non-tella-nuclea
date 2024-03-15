@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./forms/base.scss";
+
+@import "./tables/base.scss";
+
+@import "./petitions/tpnw/base.scss";

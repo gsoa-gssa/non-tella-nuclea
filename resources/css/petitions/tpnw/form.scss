@@ -1,0 +1,32 @@
+.petition-input-group {
+
+    label {
+        font-size: 0.85rem;
+
+        a {
+            color: theme("colors.highlight");
+            text-decoration: underline;
+        }
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=tel],
+    input[type=number],
+    input[type=password],
+    textarea {
+        border-radius: 0;
+        border: none;
+        font-size: 1.25rem;
+        padding: 0.5rem;
+        @apply bg-accent;
+    }
+
+    button[type=submit] {
+        border-radius: 0;
+        font-weight: 900;
+        text-transform: uppercase;
+
+        @apply bg-black text-accent;
+    }
+}
