@@ -42,7 +42,7 @@ Route::get("/verify-address/{uuid}/{email_verification_token}", function($uuid, 
     $supporter->email_verified_at = now();
     $supporter->email_verification_token = null;
     $supporter->save();
-    return redirect("/danke");
+    return redirect("/danke?uuid=".$uuid);
 })->name("verify-address");
 
 require __DIR__.'/admin.php';
