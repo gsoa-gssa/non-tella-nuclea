@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -56,9 +57,13 @@ class User extends Authenticatable implements MustVerifyEmail
     /**
      * Find configurations for the user
      */
-    public function configurations(): BelongsToMany
+    public function configurations(): BelongsToMany|Collection
     {
-        return $this->belongsToMany(Configuration::class);
+        if ($this->isAdmin()) {
+            return Configuration::all();
+        } else {
+            return $this->belongsToMany(Configuration::class);
+        }
     }
 
     /**

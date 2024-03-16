@@ -37,7 +37,7 @@ class UserController extends Controller
             'email' => 'required|email|unique:users',
             'password' => '',
             'role' => 'required',
-            'configurations' => 'array'
+            'configurations' => 'required|array'
         ]);
         if (!$validated['password']) {
             $validated['password'] = bcrypt(Str::random(42));
