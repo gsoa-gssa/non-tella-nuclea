@@ -28,6 +28,10 @@ Route::get("/{danke}", function() {
     return view("thanks", compact("supporter"));
 })->whereIn("danke", ["danke", "merci","grazie"]);
 
+Route::get("/{spenden}", function() {
+    return view("donate");
+})->whereIn("spenden", ["spenden", "fair-un-don", "donare"]);
+
 Route::resource('supporters', SupporterController::class)->only([
     'store', 'update'
 ])->parameters([
