@@ -224,7 +224,9 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
   <!--[if mso]><style>.v-button {background: transparent !important;}</style><![endif]-->
 <div align="center">
   <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="" style="height:37px; v-text-anchor:middle; width:136px;" arcsize="11%"  stroke="f" fillcolor="#d6ff00"><w:anchorlock/><center style="color:#000000;"><![endif]-->
-    <a href="{{env("APP_URL") . __("/spenden")}}?rnw-amount=2000" target="_blank" class="v-button" style="box-sizing: border-box;display: inline-block;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #000000; background-color: #d6ff00; border-radius: 4px;-webkit-border-radius: 4px; -moz-border-radius: 4px; width:auto; max-width:100%; overflow-wrap: break-word; word-break: break-word; word-wrap:break-word; mso-border-alt: none;font-size: 14px;font-weight: 700; ">
+    <a
+        href="{{env("APP_URL") . __("/spenden")}}?rnw-amount=2000&rnw-stored_customer_firstname={{$supporter->data["firstname"]}}&rnw-stored_customer_lastname={{$supporter->data["lastname"]}}&rnw-stored_customer_email={{$supporter->email}}&rnw-stored_customer_uuid={{$supporter->uuid}}&rnw-stored_customer_zip_code={{$supporter->data["zip"]}}&rnw-stored_customer_city={{$supporter->data["city"]}}"
+        target="_blank" class="v-button" style="box-sizing: border-box;display: inline-block;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #000000; background-color: #d6ff00; border-radius: 4px;-webkit-border-radius: 4px; -moz-border-radius: 4px; width:auto; max-width:100%; overflow-wrap: break-word; word-break: break-word; word-wrap:break-word; mso-border-alt: none;font-size: 14px;font-weight: 700; ">
       <span style="display:block;padding:10px 20px;line-height:120%;"><span style="line-height: 16.8px;">{{_("20.- SPENDEN")}}</span></span>
     </a>
     <!--[if mso]></center></v:roundrect><![endif]-->
@@ -243,7 +245,9 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
   <!--[if mso]><style>.v-button {background: transparent !important;}</style><![endif]-->
 <div align="center">
   <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="" style="height:37px; v-text-anchor:middle; width:136px;" arcsize="11%"  stroke="f" fillcolor="#d6ff00"><w:anchorlock/><center style="color:#000000;"><![endif]-->
-    <a href="{{env("APP_URL") . __("/spenden")}}?rnw-amount=4000" target="_blank" class="v-button" style="box-sizing: border-box;display: inline-block;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #000000; background-color: #d6ff00; border-radius: 4px;-webkit-border-radius: 4px; -moz-border-radius: 4px; width:auto; max-width:100%; overflow-wrap: break-word; word-break: break-word; word-wrap:break-word; mso-border-alt: none;font-size: 14px;font-weight: 700; ">
+    <a
+        href="{{env("APP_URL") . __("/spenden")}}?rnw-amount=4000&rnw-stored_customer_firstname={{$supporter->data["firstname"]}}&rnw-stored_customer_lastname={{$supporter->data["lastname"]}}&rnw-stored_customer_email={{$supporter->email}}&rnw-stored_customer_uuid={{$supporter->uuid}}&rnw-stored_customer_zip_code={{$supporter->data["zip"]}}&rnw-stored_customer_city={{$supporter->data["city"]}}"
+        target="_blank" class="v-button" style="box-sizing: border-box;display: inline-block;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #000000; background-color: #d6ff00; border-radius: 4px;-webkit-border-radius: 4px; -moz-border-radius: 4px; width:auto; max-width:100%; overflow-wrap: break-word; word-break: break-word; word-wrap:break-word; mso-border-alt: none;font-size: 14px;font-weight: 700; ">
       <span style="display:block;padding:10px 20px;line-height:120%;"><span style="line-height: 16.8px;">{{_("40.- SPENDEN")}}</span></span>
     </a>
     <!--[if mso]></center></v:roundrect><![endif]-->
@@ -262,7 +266,9 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
   <!--[if mso]><style>.v-button {background: transparent !important;}</style><![endif]-->
 <div align="center">
   <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="" style="height:37px; v-text-anchor:middle; width:143px;" arcsize="11%"  stroke="f" fillcolor="#d6ff00"><w:anchorlock/><center style="color:#000000;"><![endif]-->
-    <a href="{{env("APP_URL") . __("/spenden")}}?rnw-amount=10000" target="_blank" class="v-button" style="box-sizing: border-box;display: inline-block;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #000000; background-color: #d6ff00; border-radius: 4px;-webkit-border-radius: 4px; -moz-border-radius: 4px; width:auto; max-width:100%; overflow-wrap: break-word; word-break: break-word; word-wrap:break-word; mso-border-alt: none;font-size: 14px;font-weight: 700; ">
+    <a
+        href="{{env("APP_URL") . __("/spenden")}}?rnw-amount=10000&rnw-stored_customer_firstname={{$supporter->data["firstname"]}}&rnw-stored_customer_lastname={{$supporter->data["lastname"]}}&rnw-stored_customer_email={{$supporter->email}}&rnw-stored_customer_uuid={{$supporter->uuid}}&rnw-stored_customer_zip_code={{$supporter->data["zip"]}}&rnw-stored_customer_city={{$supporter->data["city"]}}"
+        target="_blank" class="v-button" style="box-sizing: border-box;display: inline-block;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #000000; background-color: #d6ff00; border-radius: 4px;-webkit-border-radius: 4px; -moz-border-radius: 4px; width:auto; max-width:100%; overflow-wrap: break-word; word-break: break-word; word-wrap:break-word; mso-border-alt: none;font-size: 14px;font-weight: 700; ">
       <span style="display:block;padding:10px 20px;line-height:120%;"><span style="line-height: 16.8px;">{{_("100.- SPENDEN")}}</span></span>
     </a>
     <!--[if mso]></center></v:roundrect><![endif]-->
