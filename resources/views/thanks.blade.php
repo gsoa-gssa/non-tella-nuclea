@@ -21,6 +21,12 @@
                 window.rnwWidget.configureWidget = function(options) {
                     options.defaults['stored_campaign_name'] = 'tpnw';
                     options.defaults['stored_campaign_configuration'] = '{{config("petition")->key}}';
+                    options.defaults['stored_customer_firstname'] = '{{$supporter->data["firstname"]}}';
+                    options.defaults['stored_customer_lastname'] = '{{$supporter->data["lastname"]}}';
+                    options.defaults['stored_customer_email'] = '{{$supporter->data["email"]}}';
+                    options.defaults['stored_customer_zip_code'] = '{{$supporter->data["zip"]}}';
+                    options.defaults['stored_customer_city'] = '{{$supporter->data["city"]}}';
+                    options.defaults['stored_customer_uuid'] = '{{$supporter->uuid}}';
                 };
                 </script>
                 <div class="dds-widget-container mt-6" data-widget="lema"></div>
