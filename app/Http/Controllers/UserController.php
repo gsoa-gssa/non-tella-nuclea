@@ -46,7 +46,6 @@ class UserController extends Controller
             $validated['password'] = bcrypt($validated['password']);
             $mustchange = false;
         }
-        $validated["email_verified_at"] = now();
         $user = User::create($validated);
         if ($user->role != 'admin') {
             if (isset($validated['configurations'])) {
@@ -59,6 +58,8 @@ class UserController extends Controller
             $token = Password::getRepository()->create($user);
             $user->sendPasswordResetNotification($token);
         }
+        $user->email_verified_at = now();
+        $user->save();
         return redirect()->route('users.index');
     }
 
