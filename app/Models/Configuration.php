@@ -28,14 +28,14 @@ class Configuration extends Model
     public static function determineConfiguration($request)
     {
         $configuration = json_decode(Storage::get("configurations/DEFAULT.json"));
-        if ($request->cookie('config_key')) {
-            $db_config = self::where("key", $request->cookie('config_key'))->first();
+        if ($request->exists('src')) {
+            $db_config = self::where("source", $request->input('src'))->first();
             if ($db_config) {
                 $additional_config = json_decode(Storage::get("configurations/" . $db_config->key . ".json"));
                 $configuration = (object) array_merge((array) $configuration, (array) $additional_config);
             }
-        } else if ($request->exists('src')) {
-            $db_config = self::where("source", $request->input('src'))->first();
+        } else if ($request->cookie('config_key')) {
+            $db_config = self::where("key", $request->cookie('config_key'))->first();
             if ($db_config) {
                 $additional_config = json_decode(Storage::get("configurations/" . $db_config->key . ".json"));
                 $configuration = (object) array_merge((array) $configuration, (array) $additional_config);

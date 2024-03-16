@@ -46,8 +46,8 @@ class UserController extends Controller
             $validated['password'] = bcrypt($validated['password']);
             $mustchange = false;
         }
+        $validated["email_verified_at"] = now();
         $user = User::create($validated);
-        $user->sendEmailVerificationNotification();
         if ($user->role != 'admin') {
             if (isset($validated['configurations'])) {
                 $user->configurations()->attach($validated['configurations']);

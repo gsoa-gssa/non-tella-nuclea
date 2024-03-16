@@ -30,7 +30,6 @@ class SupporterController extends Controller
      */
     public function store(Request $request)
     {
-
         /**
          * Validate the request.
          */
