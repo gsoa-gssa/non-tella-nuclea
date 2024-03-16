@@ -56,13 +56,9 @@ class User extends Authenticatable implements MustVerifyEmail
     /**
      * Find configurations for the user
      */
-    public function configurations(): BelongsToMany|Configuration
+    public function configurations(): BelongsToMany
     {
-        if ($this->isAdmin()) {
-            return Configuration::where('id', '>', 0);
-        } else {
-            return $this->belongsToMany(Configuration::class);
-        }
+        return $this->belongsToMany(Configuration::class);
     }
 
     /**
