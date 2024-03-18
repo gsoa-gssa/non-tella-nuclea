@@ -1,0 +1,36 @@
+{
+  "resources/css/app.scss": {
+    "file": "assets/app-BNj5bFGo.css",
+    "src": "resources/css/app.scss",
+    "isEntry": true
+  },
+  "resources/fonts/uniform/Uniform-ExtraCondensed3.woff": {
+    "file": "assets/Uniform-ExtraCondensed3-DZzwYEDo.woff",
+    "src": "resources/fonts/uniform/Uniform-ExtraCondensed3.woff"
+  },
+  "resources/fonts/uniform/Uniform-ExtraCondensed3.woff2": {
+    "file": "assets/Uniform-ExtraCondensed3-COV91oxN.woff2",
+    "src": "resources/fonts/uniform/Uniform-ExtraCondensed3.woff2"
+  },
+  "resources/fonts/uniform/Uniform-ExtraCondensed4.woff": {
+    "file": "assets/Uniform-ExtraCondensed4-BWNGVtmo.woff",
+    "src": "resources/fonts/uniform/Uniform-ExtraCondensed4.woff"
+  },
+  "resources/fonts/uniform/Uniform-ExtraCondensed4.woff2": {
+    "file": "assets/Uniform-ExtraCondensed4-BIURkFRf.woff2",
+    "src": "resources/fonts/uniform/Uniform-ExtraCondensed4.woff2"
+  },
+  "resources/fonts/uniform/Uniform-ExtraCondensed5.woff": {
+    "file": "assets/Uniform-ExtraCondensed5-_pVis0_S.woff",
+    "src": "resources/fonts/uniform/Uniform-ExtraCondensed5.woff"
+  },
+  "resources/fonts/uniform/Uniform-ExtraCondensed5.woff2": {
+    "file": "assets/Uniform-ExtraCondensed5-DLIdy-1g.woff2",
+    "src": "resources/fonts/uniform/Uniform-ExtraCondensed5.woff2"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-nuk5eCv2.js",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  }
+}
