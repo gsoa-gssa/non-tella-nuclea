@@ -83,7 +83,7 @@ html {
     letter-spacing: -.02em;
     text-transform: uppercase;
     text-decoration: underline;
-    text-decoration-color: #ff00a8;
+    text-decoration-color: theme('colors.highlight');
     text-underline-offset: 0.2em;
     text-decoration-thickness: 0.1em;
 }
