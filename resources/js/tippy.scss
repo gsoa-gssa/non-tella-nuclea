@@ -1,0 +1,9 @@
+.tippy-box {
+    background-color: theme("colors.accent");
+    color: theme("colors.black");
+    font-weight: 500;
+
+    .tippy-arrow {
+        color: theme("colors.accent");
+    }
+}
