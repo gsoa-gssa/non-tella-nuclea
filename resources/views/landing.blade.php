@@ -28,7 +28,7 @@
                 view("text." . app()->getLocale())
             !!}
             <div class="mt-12">
-                <h2 class="tpnw-title text-xl md:text-2xl lg:text-3xl">{{__("Unterstützer*innen:")}}</h2>
+                <h2 class="tpnw-title text-xl md:text-2xl lg:text-3xl">{{__("Allianz Mitglieder:")}}</h2>
                 <x-supporter-organisations />
             </div>
         </div>
