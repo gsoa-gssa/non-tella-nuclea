@@ -3,6 +3,7 @@
     <div class="tpnw-petition-header bg-accent">
             <div class="tpnw-petition-header__inner px-4 pt-8 md:pt-12 lg:pt-20 pb-24 md:pb-28 lg:pb-36  w-fit mx-auto max-w-7xl sm:px-6 lg:px-8 py-6">
                 <x-petition-icon class="max-w-[369px] w-full mb-2 mx-auto" />
+                <h2 class="text-center text-xl md:text-2xl lg:text-3xl">{{__("Taten statt Worte:")}}</h2>
                 <h1 class="tpnw-title text-center text-3xl md:text-4xl lg:text-5xl">{{__("Atomwaffenverbot jetzt!")}}</h1>
             </div>
         </div>

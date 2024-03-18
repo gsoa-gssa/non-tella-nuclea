@@ -1,1 +1,1 @@
-<strong>Danke für deine Unterstützung!</strong> Nur mit deiner Hilfe werden wir es schaffen, die Atomwaffenverbotsinitiative lancieren zu können. Wir melden uns bei dir, sobald wir dazu bereit sind.
+<strong>Merci pour votre soutien !</strong> Ce n'est qu'avec votre aide que nous pourrons lancer l'initiative pour l'interdiction des armes nucléaires. Nous vous contacterons dès que nous serons prêts.

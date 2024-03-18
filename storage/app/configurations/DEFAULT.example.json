@@ -1,55 +1,81 @@
 {
     "type": "domainbased",
-    "name": "default",
     "langsetting": "domainbased",
     "domains": {
+        "tpnw.ddev.site": {
+            "locale": "de"
+        },
         "jetzt.atomwaffenverbot.ch": {
-            "lang": "de"
+            "locale": "de"
         },
         "maintenant.interdiction-armes-nucleaires.ch": {
-            "lang": "fr"
+            "locale": "fr"
         },
         "ora.interdizione-armi-nucleari.ch": {
-            "lang": "it"
+            "locale": "it"
         }
     },
-    "fields": [
+    "email_verification": true,
+    "datafields": [
         {
             "name": "firstname",
-            "label": "Vorname",
+            "label": "First Name",
             "type": "text",
             "required": true
         },
         {
             "name": "lastname",
-            "label": "Nachname",
+            "label": "Last Name",
             "type": "text",
             "required": true
         },
         {
             "name": "email",
-            "label": "E-Mail",
+            "label": "Email address",
             "type": "email",
             "required": true
         },
         {
             "name": "zip",
-            "label": "PLZ",
+            "label": "ZIP code",
             "type": "text",
             "required": true
         },
         {
             "name": "city",
-            "label": "Ort",
+            "label": "City",
             "type": "text",
             "required": true
         },
         {
             "name": "phone",
-            "label": "Telefonnummer",
+            "label": "Phone number",
             "type": "text",
             "required": false,
             "placeholder": "optional"
         }
-    ]
+    ],
+    "optin": {
+        "de": "Ich bin damit einverstanden, dass die GSoA mich über ihre Kampagnen und Aktionen informiert. Mehr dazu im <a href=\"https://www.gsoa.ch/datenschutz\" target=\"_blank\">Datenschutz</a>.",
+        "fr": "Je consens à ce que la GSoA m'informe sur ses campagnes et actions. Plus d'informations dans la <a href=\"https://gssa.ch/protection-de-donnees/\" target=\"_blank\">déclaration de confidentialité</a>.",
+        "it": "Acconsento a che la GSoA mi informi sulle sue campagne e azioni. Maggiori informazioni nella <a href=\"https://it.gsoa.ch/protezione-dei-dati/\" target=\"_blank\">dichiarazione sulla protezione dei dati</a>.",
+        "checked": true
+    },
+    "thanks_url": {
+        "de": "/danke",
+        "fr": "/merci",
+        "it": "/grazie"
+    },
+    "share": {
+        "text": {
+            "de": "Hoi👋\nIch habe soeben einen Aufruf unterschrieben, um den Bundesrat dazu aufzufordern, den Atomwaffenverbotsvertrag zu unterzeichnen📝. Hilfst du auch mit?",
+            "fr": "Salut👋\nJe viens de signer un appel pour demander au Conseil fédéral de signer le traité d'interdiction des armes nucléaires📝. Tu veux m'aider?",
+            "it": "Ciao👋\nHo appena firmato un appello per chiedere al Consiglio federale di firmare il trattato di divieto delle armi nucleari📝. Vuoi aiutarmi?"
+        },
+        "link": {
+            "de": "https://jetzt.atomwaffenverbot.ch",
+            "fr": "https://maintenant.interdiction-armes-nucleaires.ch",
+            "it": "https://ora.interdizione-armi-nucleari.ch"
+        }
+    }
 }

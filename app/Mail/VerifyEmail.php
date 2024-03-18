@@ -28,7 +28,7 @@ class VerifyEmail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: __("Thanks! Please verify your email address"),
+            subject: __("Thanks for your support, :name!", ['name' => $this->supporter->data["firstname"]]),
             from: config('mail.from.address'),
         );
     }
