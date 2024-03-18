@@ -10,7 +10,7 @@
             @php
                 $url = config("petition")->share->link->{app()->getLocale()};
                 if (config("petition")->type == "sourcebased") {
-                    $url .= "&src=" . config("petition")->source;
+                    $url .= "?src=" . config("petition")->source;
                 }
             @endphp
             type="hidden"
