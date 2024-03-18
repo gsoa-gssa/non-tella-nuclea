@@ -14,6 +14,7 @@
             <div class="tpnw-petition__container__inner max-w-[793px] mx-auto bg-white p-4 md:p-8 lg:p-10">
                 <div class="tp-petition-cta__container__inner__content">
                     <p class="text-3xl font-bold">{{__("Mit der Atomwaffenverbotsinitiative fordern wir den Bundesrat auf, dem Atomwaffenverbotsvertrag beizutreten und die humanitäre Verantwortung der Schweiz wahrnehmen. Sei dabei!")}}</p>
+                    <p class="font-xl mt-2">{{__("Schon :count Personen unterstützen uns!", ["count" => $suppCount])}}</p>
                     <div class="mt-2 md:mt-4">
                         <x-form />
                     </div>

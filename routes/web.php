@@ -15,7 +15,8 @@ use App\Http\Controllers\SupporterController;
 */
 
 Route::get('/', function () {
-    return view("landing");
+    $suppCount = \App\Models\Supporter::count();
+    return view("landing", compact("suppCount"));
 });
 
 Route::get("/{danke}", function() {
