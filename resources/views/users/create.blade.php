@@ -28,7 +28,7 @@
                 </div>
                 <div class="mt-6" x-show="role === 'user'">
                     <x-input-label for="configurations[]" :value="__('Select configurations')"/>
-                    <div class="flex gap-4 mt-1">
+                    <div class="flex gap-4 mt-1 flex-wrap">
                         @foreach (\App\Models\Configuration::all() as $configuration)
                             <div class="flex gap-2">
                                 <input type="checkbox" id="configurations-{{$configuration->id}}" name="configurations[]" value="{{$configuration->id}}">
