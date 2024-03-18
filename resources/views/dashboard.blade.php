@@ -14,8 +14,8 @@
                         }
                     @endphp
                     @foreach ($configurations as $item)
-                        <div class="flex-2">
-                            <input type="checkbox" id="configurations-{{$item->id}}" name="configurations[]" value="{{$item->key}}">
+                        <div class="flex-2 flex-wrap">
+                            <input type="checkbox" id="configurations-{{$item->id}}" name="configurations[]" value="{{$item->key}}" checked>
                             <label for="configurations-{{$item->id}}">{{$item->key}}</label>
                         </div>
                     @endforeach
