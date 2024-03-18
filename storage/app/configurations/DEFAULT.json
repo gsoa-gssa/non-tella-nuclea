@@ -33,17 +33,12 @@
             "name": "email",
             "label": "Email address",
             "type": "email",
-            "required": true
+            "required": true,
+            "fullwidth": true
         },
         {
             "name": "zip",
             "label": "ZIP code",
-            "type": "text",
-            "required": true
-        },
-        {
-            "name": "city",
-            "label": "City",
             "type": "text",
             "required": true
         },

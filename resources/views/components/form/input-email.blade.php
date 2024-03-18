@@ -1,4 +1,4 @@
-<div class="petition-input-group">
+<div class="petition-input-group @if(isset($item->fullwidth) && $item->fullwidth)petition-input-group__fullwidth @endif">
     <label for="{{$formID}}-{{$item->name}}">{{__($item->label)}}</label>
     <input
         type="email"
