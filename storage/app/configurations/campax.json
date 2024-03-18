@@ -1,0 +1,10 @@
+{
+    "type": "sourcebased",
+    "source": "campax",
+    "optin": {
+        "de": "Ich bin damit einverstanden, dass CAMPAX mich über ihre Kampagnen und Aktionen informiert. Mehr dazu im <a href=\"https://campax.org/datenschutzrichtlinien/\" target=\"_blank\">Datenschutz</a>.",
+        "fr": "J'accepte que CAMPAX m'informe sur leurs campagnes et actions. Plus d'informations dans la <a href=\"https://campax.org/fr/politique-de-confidentialite/\" target=\"_blank\">déclaration de protection des données</a>.",
+        "it": "Accetto che CAMPAX mi informi sulle loro campagne e azioni. Maggiori informazioni nella <a href=\"https://campax.org/it/politica-sulla-privacy/\" target=\"_blank\">dichiarazione sulla protezione dei dati</a>.",
+        "checked": true
+    }
+}

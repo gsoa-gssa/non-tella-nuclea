@@ -1,5 +1,5 @@
 *
 !public/
 !configurations/
-!configurations/DEFAULT.example.json
+!configurations/**
 !.gitignore

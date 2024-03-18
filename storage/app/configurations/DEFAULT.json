@@ -1,0 +1,81 @@
+{
+    "type": "domainbased",
+    "langsetting": "domainbased",
+    "domains": {
+        "tpnw.ddev.site": {
+            "locale": "de"
+        },
+        "jetzt.atomwaffenverbot.ch": {
+            "locale": "de"
+        },
+        "maintenant.interdiction-armes-nucleaires.ch": {
+            "locale": "fr"
+        },
+        "ora.interdizione-armi-nucleari.ch": {
+            "locale": "it"
+        }
+    },
+    "email_verification": true,
+    "datafields": [
+        {
+            "name": "firstname",
+            "label": "First Name",
+            "type": "text",
+            "required": true
+        },
+        {
+            "name": "lastname",
+            "label": "Last Name",
+            "type": "text",
+            "required": true
+        },
+        {
+            "name": "email",
+            "label": "Email address",
+            "type": "email",
+            "required": true
+        },
+        {
+            "name": "zip",
+            "label": "ZIP code",
+            "type": "text",
+            "required": true
+        },
+        {
+            "name": "city",
+            "label": "City",
+            "type": "text",
+            "required": true
+        },
+        {
+            "name": "phone",
+            "label": "Phone number",
+            "type": "text",
+            "required": false,
+            "placeholder": "optional"
+        }
+    ],
+    "optin": {
+        "de": "Ich bin damit einverstanden, dass die Allianz für ein Atomwaffenverbot mich über ihre Kampagnen und Aktionen informiert. Mehr dazu im <a href=\"https://www.gsoa.ch/datenschutz\" target=\"_blank\">Datenschutz</a>.",
+        "fr": "Je consens à ce que l'Alliance pour l'interdiction des armes nucléaires m'informe sur ses campagnes et actions. Plus d'informations dans la <a href=\"https://gssa.ch/protection-de-donnees/\" target=\"_blank\">déclaration de protection des données</a>.",
+        "it": "Acconsento a che l'Alleanza per il divieto delle armi nucleari mi informi sulle sue campagne e azioni. Maggiori informazioni nella <a href=\"https://it.gsoa.ch/protezione-dei-dati/\" target=\"_blank\">protezione dei dati</a>.",
+        "checked": true
+    },
+    "thanks_url": {
+        "de": "/danke",
+        "fr": "/merci",
+        "it": "/grazie"
+    },
+    "share": {
+        "text": {
+            "de": "Hoi👋\nIch habe soeben einen Aufruf unterschrieben, um den Bundesrat dazu aufzufordern, den Atomwaffenverbotsvertrag zu unterzeichnen📝. Hilfst du auch mit?",
+            "fr": "Salut👋\nJe viens de signer un appel pour demander au Conseil fédéral de signer le traité d'interdiction des armes nucléaires📝. Tu veux m'aider?",
+            "it": "Ciao👋\nHo appena firmato un appello per chiedere al Consiglio federale di firmare il trattato di divieto delle armi nucleari📝. Vuoi aiutarmi?"
+        },
+        "link": {
+            "de": "https://jetzt.atomwaffenverbot.ch",
+            "fr": "https://maintenant.interdiction-armes-nucleaires.ch",
+            "it": "https://ora.interdizione-armi-nucleari.ch"
+        }
+    }
+}

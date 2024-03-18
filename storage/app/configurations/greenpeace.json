@@ -1,0 +1,10 @@
+{
+    "type": "sourcebased",
+    "source": "greenpeace",
+    "optin": {
+        "de": "Ich bin damit einverstanden, dass Greenpeace mich über ihre Kampagnen und Aktionen informiert. Mehr Informationen in der <a href=\"https://www.greenpeace.ch/de/datenschutz/\" target=\"_blank\">Datenschutzerklärung</a>.",
+        "fr": "J'accepte que Greenpeace m'informe sur leurs campagnes et actions. Plus d'informations dans la <a href=\"https://www.greenpeace.ch/fr/protection-des-donnees/\" target=\"_blank\">déclaration de protection des données</a>.",
+        "it": "Accetto che Greenpeace mi informi sulle loro campagne e azioni. Ulteriori informazioni nella <a href=\"https://www.greenpeace.ch/it/protezione-dei-dati/\" target=\"_blank\">dichiarazione sulla protezione dei dati</a>.",
+        "checked": true
+    }
+}

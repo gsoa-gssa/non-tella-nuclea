@@ -1,0 +1,10 @@
+{
+    "type": "sourcebased",
+    "source": "ican",
+    "optin": {
+        "de": "Ich bin damit einverstanden, dass ICAN Schweiz mich über ihre Kampagnen und Aktionen informiert. Weitere Informationen in der <a href=\"https://www.icanswitzerland.ch/privacy-policy/\" target=\"_blank\">Datenschutzerklärung</a>.",
+        "fr": "J'accepte que ICAN Suisse m'informe sur leurs campagnes et actions. Plus d'informations dans la <a href=\"https://www.icanswitzerland.ch/privacy-policy/\" target=\"_blank\">déclaration de confidentialité</a>.",
+        "it": "Accetto che ICAN Svizzera mi informi sulle loro campagne e azioni. Ulteriori informazioni nella <a href=\"https://www.icanswitzerland.ch/privacy-policy/\" target=\"_blank\">dichiarazione sulla privacy</a>.",
+        "checked": true
+    }
+}
