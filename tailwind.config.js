@@ -13,7 +13,7 @@ export default {
         extend: {
             colors: {
                 accent: "#D6FF00",
-                highlight: "#FF00A8",
+                highlight: "#ff00ff",
             },
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
