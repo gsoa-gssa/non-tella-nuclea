@@ -5,7 +5,7 @@
             @csrf
             <div class="mt-2">
                 <x-input-label for="configurations[]" :value="__('Select configurations')"/>
-                <div class="flex gap-4 mt-1">
+                <div class="flex gap-4 mt-1  flex-wrap">
                     @php
                         if (auth()->user()->isAdmin()) {
                             $configurations = \App\Models\Configuration::all();
@@ -14,7 +14,7 @@
                         }
                     @endphp
                     @foreach ($configurations as $item)
-                        <div class="flex-2 flex-wrap">
+                        <div class="flex-2">
                             <input type="checkbox" id="configurations-{{$item->id}}" name="configurations[]" value="{{$item->key}}" checked>
                             <label for="configurations-{{$item->id}}">{{$item->key}}</label>
                         </div>
