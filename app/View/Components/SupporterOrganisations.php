@@ -9,11 +9,11 @@ use Illuminate\View\Component;
 
 class SupporterOrganisations extends Component
 {
-    public array $logos;
+    public $logos;
     /**
      * Create a new component instance.
      */
-    public function __construct($logos = [])
+    public function __construct($logos = null)
     {
         $this->logos = Storage::allFiles('public/logos/' . app()->getLocale());
     }
