@@ -50,5 +50,15 @@ Route::get("/verify-address/{uuid}/{email_verification_token}", function($uuid, 
     return redirect("/danke?uuid=".$uuid);
 })->name("verify-address");
 
+if (env("APP_ENV") === "local") {
+    Route::get("/email-preview", function() {
+        $supporter = \App\Models\Supporter::first();
+        if (request()->lang) {
+            app()->setLocale(request()->lang);
+        }
+        return view("emails.verify-email", compact("supporter"));
+    })->name("email-preview");
+}
+
 require __DIR__.'/admin.php';
 require __DIR__.'/auth.php';

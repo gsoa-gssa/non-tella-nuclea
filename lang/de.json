@@ -1,4 +1,5 @@
 {
+    ":amount SPENDEN" : ":amount SPENDEN",
     "/spenden": "/spenden",
     "<strong>Danke, dass du bei der Initiative für ein Atomwaffenverbot mitmachen willst! </strong>Bitte bestätige hier kurz deine E-Mail Adresse:</p>": "<strong>Danke, dass du bei der Initiative für ein Atomwaffenverbot mitmachen willst! </strong>Bitte bestätige hier kurz deine E-Mail Adresse:</p>",
     "<strong>Kannst du dir vorstellen, unsere Initiative mit einer Spende zu unterstützen?</strong> Wir wären dir dafür unendlich dankbar:</p>": "<strong>Kannst du dir vorstellen, unsere Initiative mit einer Spende zu unterstützen?</strong> Wir wären dir dafür unendlich dankbar:</p>",
@@ -30,6 +31,7 @@
     "Delete Account": "Konto löschen",
     "Die Allianz für ein Atomwaffenverbot": "Die Allianz für ein Atomwaffenverbot",
     "Email": "E-Mail",
+    "E-MAIL BESTÄTIGEN" : "E-MAIL BESTÄTIGEN",
     "email is already in use": "Diese E-Mail-Adresse wird bereits verwendet",
     "email is invalid": "Die E-Mail-Adresse ist ungültig",
     "email is required": "Das E-Mail-Feld wird benötigt",

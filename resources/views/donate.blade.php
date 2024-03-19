@@ -10,6 +10,8 @@
                     $availableLanguages = ["de", "fr"];
                     $language = in_array(app()->getLocale(), $availableLanguages) ? app()->getLocale() : "fr";
                 @endphp
+                <div id="root">
+                </div>
                 <script language="javascript" src="https://widget.raisenow.com/widgets/lema/gsoas-948f/js/dds-init-widget-{{$language}}.js" type="text/javascript"></script>
                 <script type="text/javascript">
                 window.rnwWidget = window.rnwWidget || {};

@@ -1,4 +1,5 @@
 {
+    ":amount SPENDEN": "DONA :amount",
     "/spenden": "/donare",
     "<strong>Danke, dass du bei der Initiative für ein Atomwaffenverbot mitmachen willst! </strong>Bitte bestätige hier kurz deine E-Mail Adresse:</p>": "<strong>Grazie per aver deciso di partecipare all'iniziativa per il divieto delle armi nucleari! </strong>Per favore conferma qui brevemente il tuo indirizzo email:</p>",
     "<strong>Kannst du dir vorstellen, unsere Initiative mit einer Spende zu unterstützen?</strong> Wir wären dir dafür unendlich dankbar:</p>": "<strong>Puoi immaginare di sostenere la nostra iniziativa con una donazione?</strong> Te ne saremmo infinitamente grati:</p>",
@@ -30,6 +31,7 @@
     "Delete Account": "Elimina account",
     "Die Allianz für ein Atomwaffenverbot": "L'Alleanza per il divieto delle armi nucleari",
     "Email": "E-mail",
+    "E-MAIL BESTÄTIGEN": "CONFERMA EMAIL",
     "email is already in use": "Questo indirizzo email è già in uso",
     "email is invalid": "L'indirizzo email non è valido",
     "email is required": "Il campo email è obbligatorio",
