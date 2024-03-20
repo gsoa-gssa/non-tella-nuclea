@@ -7,7 +7,7 @@
         class="petition-input-group__input"
         placeholder="{{$item->placeholder ?? ''}}"
         @if($item->required) required @endif
-        value="{{old($item->name)}}"
+        value="{{old($item->name, request()->input($item->name))}}"
     >
     @error($item->name)
         <p class="petition-input-group__error">{{ $message }}</p>
