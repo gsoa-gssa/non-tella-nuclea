@@ -50,3 +50,8 @@ html {
         --button-text-color: theme("colors.white");
     }
 }
+
+*::selection {
+    background-color: theme("colors.highlight");
+    color: theme("colors.black");
+}
