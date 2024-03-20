@@ -6,7 +6,7 @@
         action="{{route('supporters.store')}}"
         method="post"
         class="petition-supporter-form__form"
-        onclick="var _paq = window._paq = window._paq || []; _paq.push(['trackEvent', 'Form', 'Submit', '{{config('petition')->key}}']);"
+        onsubmit="var _paq = window._paq = window._paq || []; _paq.push(['trackEvent', 'Form', 'Submit', '{{config('petition')->key}}']);"
     >
         @if ($errors->any())
             <div class="petition-input-group petition-input-group__fullwidth">
