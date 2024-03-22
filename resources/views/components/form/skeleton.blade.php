@@ -33,6 +33,22 @@
                 {!!config("petition")->optin->{app()->getLocale()} !!}
             </label>
         </div>
+        @if(config("petition")->publication->status === true)
+            <div class="petition-input-group petition-input-group__fullwidth">
+                <input
+                    type="checkbox"
+                    name="public"
+                    id="{{$formID}}-publication"
+                    value="1"
+                    @if (config("petition")->publication->checked) checked @endif
+                >
+                <label
+                    for="{{$formID}}-publication"
+                >
+                    {!!config("petition")->publication->langs->{app()->getLocale()} !!}
+                </label>
+            </div>
+        @endif
         <div class="petition-input-group petition-input-group__fullwidth">
             <button type="submit" class="petition-supporter-form__submit">
                 {{__("Sign the petition")}}

@@ -37,7 +37,8 @@ class SupporterController extends Controller
             "email" => "required|email|unique:supporters,email",
             "data" => "required|array",
             "configuration" => "exists:configurations,key",
-            "optin" => "boolean"
+            "optin" => "boolean",
+            "public" => "boolean"
         ], [
             "email.required" => __("email is required"),
             "email.email" => __("email is invalid"),

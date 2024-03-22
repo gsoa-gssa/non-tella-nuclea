@@ -72,5 +72,14 @@
             "fr": "https://maintenant.interdiction-armes-nucleaires.ch",
             "it": "https://ora.interdizione-armi-nucleari.ch"
         }
+    },
+    "publication": {
+        "status": false,
+        "checked": true,
+        "langs": {
+            "de": "Ich bin einverstanden, dass meine Unterschrift auf der Website veröffentlicht wird.",
+            "fr": "Je consens à ce que ma signature soit publiée sur le site web.",
+            "it": "Acconsento a che la mia firma sia pubblicata sul sito web."
+        }
     }
 }
