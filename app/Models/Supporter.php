@@ -44,26 +44,43 @@ class Supporter extends Model
     /**
      * Export supporters to XLSX file.
      */
-    public static function exportToXlsx($supporters)
+    public static function exportToXlsx($supporters, $filename)
     {
-        return Excel::download(new SupporterExport($supporters), "supporters.xlsx");
+        return Excel::download(new SupporterExport($supporters), $filename . ".xlsx");
     }
 
     /**
      * Export supporters to CSV file.
      */
-    public static function exportToCsv($supporters)
+    public static function exportToCsv($supporters, $filename)
     {
-        return Excel::download(new SupporterExport($supporters), "supporters.csv", \Maatwebsite\Excel\Excel::CSV);
+        return Excel::download(new SupporterExport($supporters), $filename . ".csv", \Maatwebsite\Excel\Excel::CSV);
     }
 
     /**
      * Export supporters to JSON file.
      */
-    public static function exportToJson($supporters)
+    public static function exportToJson($supporters, $filename)
     {
         return response()->streamDownload(function () use ($supporters) {
             echo $supporters->toJson();
-        }, "supporters.json");
+        }, $filename . ".json");
+    }
+
+    /**
+     * Find all possible data fields for supporters.
+     */
+    public static function findDataFields()
+    {
+        $fields = [];
+        $supporters = Supporter::all();
+        foreach ($supporters as $supporter) {
+            foreach ($supporter->data as $key => $value) {
+                if (!in_array($key, $fields)) {
+                    $fields[] = $key;
+                }
+            }
+        }
+        return $fields;
     }
 }

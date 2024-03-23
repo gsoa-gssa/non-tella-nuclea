@@ -115,19 +115,25 @@ class SupporterController extends Controller
             }
         }
         $supporters = Supporter::whereIn("configuration", $validated["configurations"])->get();
+        $fields = Supporter::findDataFields();
         foreach ($supporters as $supporter) {
-            foreach ($supporter->data as $key => $value) {
-                $supporter->{$key} = $value;
+            foreach ($fields as $field) {
+                if (!array_key_exists($field, $supporter->data)) {
+                    $supporter->{$field} = null;
+                } else {
+                    $supporter->{$field} = $supporter->data[$field];
+                }
             }
         }
-        $supporters = $supporters->makeHidden("data");
+        $supporters->makeHidden("data");
+        $filename = "supporters-" . now()->format("Y-m-d-H-i-s");
         switch ($validated["format"]) {
             case "csv":
-                return Supporter::exportToCsv($supporters);
+                return Supporter::exportToCsv($supporters, $filename);
             case "json":
-                return Supporter::exportToJson($supporters);
+                return Supporter::exportToJson($supporters, $filename);
             case "xlsx":
-                return Supporter::exportToXlsx($supporters);
+                return Supporter::exportToXlsx($supporters, $filename);
         }
     }
 }

@@ -49,6 +49,16 @@
                 </label>
             </div>
         @endif
+        @if (strpos(request()->getQueryString(), "stored_") !== false)
+            @php
+                $stored_params = array_filter(request()->all(), function($key) {
+                    return strpos($key, "stored_") !== false;
+                }, ARRAY_FILTER_USE_KEY);
+            @endphp
+            @foreach ($stored_params as $key => $value)
+                <input type="hidden" name="data[{{str_replace("stored_", "", $key)}}]" value="{{$value}}">
+            @endforeach
+        @endif
         <div class="petition-input-group petition-input-group__fullwidth">
             <button type="submit" class="petition-supporter-form__submit">
                 {{__("Sign the petition")}}
