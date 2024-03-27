@@ -19,7 +19,7 @@
                 <script type="text/javascript">
                 window.rnwWidget = window.rnwWidget || {};
                 window.rnwWidget.configureWidget = function(options) {
-                    options.defaults['stored_campaign_name'] = 'tpnw';
+                    options.defaults['stored_campaign_name'] = 'tpnw_pledge';
                     options.defaults['stored_campaign_configuration'] = '{{config("petition")->key}}';
                     options.defaults['stored_customer_firstname'] = '{{$supporter->data["firstname"]}}';
                     options.defaults['stored_customer_lastname'] = '{{$supporter->data["lastname"]}}';
