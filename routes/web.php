@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\SupporterController;
 
 /*
@@ -17,6 +18,8 @@ use App\Http\Controllers\SupporterController;
 Route::get('/', function () {
     $suppCount = \App\Models\Supporter::count();
     $suppCount = floor(max((76 - $suppCount / 3), 0) + $suppCount);
+    $signatures_from_wecollect = Storage::get('signatures/wecollect.txt');
+    $suppCount += $signatures_from_wecollect;
     return view("landing", compact("suppCount"));
 });
 

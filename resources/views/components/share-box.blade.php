@@ -18,7 +18,6 @@
             value="{{$url}}"
         >
         <a class="share-button" data-share-type="whatsapp">{{__("Auf WhatsApp teilen")}}</a>
-        <a class="share-button" data-share-type="telegram">{{__("Auf Telegram teilen")}}</a>
         <a class="share-button" data-share-type="twitter">{{__("Auf Twitter teilen")}}</a>
         <a class="share-button" data-share-type="facebook">{{__("Auf Facebook teilen")}}</a>
         <a class="share-button md:col-span-2" data-share-type="email">{{__("Per E-Mail teilen")}}</a>
