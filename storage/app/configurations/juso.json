@@ -1,0 +1,10 @@
+{
+    "type": "sourcebased",
+    "source": "juso",
+    "optin": {
+        "de": "Ich bin damit einverstanden, dass die JUSO Schweiz mich über ihre Kampagnen und Aktionen informiert. Mehr dazu im <a href=\"https://juso.ch/de/datenschutz/\" target=\"_blank\">Datenschutz</a>.",
+        "fr": "J'accepte que les Verts suisses m'informent sur leurs campagnes et actions. Plus d'informations dans la <a href=\"https://juso.ch/fr/protection-des-donnees/\" target=\"_blank\">déclaration de protection des données</a>.",
+        "it": "Accetto che i Verdi Svizzeri mi informino sulle loro campagne e azioni. Maggiori informazioni nella <a href=\"https://juso.ch/it/datenschutz/\" target=\"_blank\">dichiarazione sulla protezione dei dati</a>.",
+        "checked": true
+    }
+}
