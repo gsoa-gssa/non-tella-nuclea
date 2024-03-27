@@ -65,6 +65,7 @@
             </button>
         </div>
         <input type="hidden" name="configuration" value="{{config("petition")->key}}">
+        <input type="hidden" name="data[locale]" value="{{app()->getLocale()}}">
     </form>
 </div>
 
