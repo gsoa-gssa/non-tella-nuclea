@@ -46,7 +46,6 @@ Route::resource('supporters', SupporterController::class)->only([
 Route::get("/verify-address/{uuid}/{email_verification_token}", function($uuid, $email_verification_token) {
     $supporter = \App\Models\Supporter::where("uuid", $uuid)->where("email_verification_token", $email_verification_token)->firstOrFail();
     $supporter->email_verified_at = now();
-    $supporter->email_verification_token = null;
     $supporter->save();
     return redirect("/danke?uuid=".$uuid);
 })->name("verify-address");
