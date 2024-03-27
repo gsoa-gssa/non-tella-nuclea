@@ -16,7 +16,7 @@ use App\Http\Controllers\SupporterController;
 
 Route::get('/', function () {
     $suppCount = \App\Models\Supporter::count();
-    $suppCount = floor((76 - $suppCount / 3) + $suppCount);
+    $suppCount = floor(max((76 - $suppCount / 3), 0) + $suppCount);
     return view("landing", compact("suppCount"));
 });
 
