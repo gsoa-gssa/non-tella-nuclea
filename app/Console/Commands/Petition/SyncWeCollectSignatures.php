@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console\Commands\Petiton;
+namespace App\Console\Commands\Petition;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Http;

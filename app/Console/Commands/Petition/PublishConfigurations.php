@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console\Commands\Petiton;
+namespace App\Console\Commands\Petition;
 
 
 use App\Models\Configuration;
