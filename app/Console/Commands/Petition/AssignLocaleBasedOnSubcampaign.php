@@ -5,6 +5,7 @@ namespace App\Console\Commands\Petition;
 use App\Models\Supporter;
 use Illuminate\Console\Command;
 use function Laravel\Prompts\select;
+use Illuminate\Support\Facades\Storage;
 
 class AssignLocaleBasedOnSubcampaign extends Command
 {
@@ -27,6 +28,7 @@ class AssignLocaleBasedOnSubcampaign extends Command
      */
     public function handle()
     {
+        ob_start();
         $this->info('Assigning locales based on subcampaigns...');
         $dry_run = select('Do you want to run this command in dry-run mode?', ['Yes', 'No']);
         if ($dry_run === 'Yes') {
@@ -62,6 +64,9 @@ class AssignLocaleBasedOnSubcampaign extends Command
                 $supporter->save();
             }
         }
+        $this->info('Done.');
+        $log = ob_get_clean();
+        Storage::disk('local')->put('assign-locales-subcampaigns.log', $log);
     }
 
     /**
