@@ -4,6 +4,7 @@ namespace App\Console\Commands\Petition;
 
 use App\Models\Supporter;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Log;
 use function Laravel\Prompts\select;
 use Illuminate\Support\Facades\Storage;
 
@@ -38,6 +39,7 @@ class AssignLocaleBasedOnSubcampaign extends Command
 
         foreach ($supporters as $supporter) {
             $this->info('Assigning locale to supporter ' . $supporter->id);
+            Log::info('Assigning locale to supporter ' . $supporter->id);
 
             if (!isset($supporter->data["subcampaign"])) {
                 $this->error('No subcampaign found for supporter ' . $supporter->id);
@@ -51,11 +53,14 @@ class AssignLocaleBasedOnSubcampaign extends Command
 
             if (isset($supporter->data["locale"]) && $supporter->data["locale"] === $locale) {
                 $this->info('Correct locale already assigned to supporter ' . $supporter->id);
+                Log::info('Correct locale already assigned to supporter ' . $supporter->id);
                 continue;
             } else if (isset($supporter->data["locale"])) {
-                $this->info('Changing locale from ' . $supporter->data["locale"] . ' to ' . $locale . ' for supporter ' . $supporter->id . ' based on subcampaign ' . $supporter->data["subcampaign"]);
+                $this->alert('Changing locale from ' . $supporter->data["locale"] . ' to ' . $locale . ' for supporter ' . $supporter->id . ' based on subcampaign ' . $supporter->data["subcampaign"]);
+                Log::alert('Changing locale from ' . $supporter->data["locale"] . ' to ' . $locale . ' for supporter ' . $supporter->id . ' based on subcampaign ' . $supporter->data["subcampaign"]);
             } else {
                 $this->info('Assigning locale ' . $locale . ' to supporter ' . $supporter->id . ' based on subcampaign ' . $supporter->data["subcampaign"]);
+                Log::info('Assigning locale ' . $locale . ' to supporter ' . $supporter->id . ' based on subcampaign ' . $supporter->data["subcampaign"]);
             }
 
             if ($dry_run === 'No') {
@@ -77,10 +82,12 @@ class AssignLocaleBasedOnSubcampaign extends Command
         $locale = explode('-', $subcampaign);
         if (count($locale) !== 2) {
             $this->error('Invalid subcampaign format: ' . $subcampaign);
+            Log::error('Invalid subcampaign format: ' . $subcampaign);
             return null;
         }
         if (!in_array($locale[1], ['de', 'fr', 'it'])) {
             $this->error('Invalid locale: ' . $locale[1]);
+            Log::error('Invalid locale: ' . $locale[1]);
             return null;
         }
         return $locale[1];
