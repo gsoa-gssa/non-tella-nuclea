@@ -29,7 +29,7 @@ class SyncWeCollectSignatures extends Command
     public function handle()
     {
         $dom = new Dom();
-        $html = Http::get('https://wecollect.ch/projekte/offener-brief-beat-jans')->body();
+        $html = Http::get('https://wecollect.ch/projekte/atomwaffenverbots-initiative')->body();
         $dom->loadStr($html);
         $signatures_from_wecollect = (int)str_replace("’", "", $dom->find('.campaign__hero__meta')[0]->find('span')[1]->text());
         Storage::put('signatures/wecollect.txt', $signatures_from_wecollect);
