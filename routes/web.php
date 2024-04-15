@@ -20,7 +20,7 @@ Route::get('/', function () {
     $suppCount = floor(max((76 - $suppCount / 3), 0) + $suppCount);
     $signatures_from_wecollect = Storage::get('signatures/wecollect.txt');
     $suppCount += $signatures_from_wecollect;
-    return view("landing", compact("suppCount"));
+    return view("landing.default", compact("suppCount"));
 });
 
 Route::get("/{danke}", function() {
