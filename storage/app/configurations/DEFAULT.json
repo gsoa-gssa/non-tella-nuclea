@@ -3,7 +3,7 @@
     "langsetting": "domainbased",
     "domains": {
         "tpnw.ddev.site": {
-            "locale": "de"
+            "locale": "it"
         },
         "jetzt.atomwaffenverbot.ch": {
             "locale": "de"
@@ -50,6 +50,73 @@
             "placeholder": "optional"
         }
     ],
+    "signatureCountFields": {
+        "label": {
+            "de": "Ich verspreche...",
+            "fr": "Je m’engage...",
+            "it": "Prometto..."
+        },
+        "default": {
+            "de": "Bitte wähle eine Option",
+            "fr": "Veuillez choisir une option",
+            "it": "Per favore, scegli un'opzione"
+        },
+        "options": [
+            {
+                "value": 1,
+                "label": {
+                    "de": "Eine Unterschrift",
+                    "fr": "à signer l'initiative",
+                    "it": "Una firma"
+                },
+                "helper": {
+                    "de": "Du versprichst uns damit, dass du selber unsere Initiative unterschreibst",
+                    "fr": "Tu nous promèts ainsi que tu signeras toi-même notre initiative",
+                    "it": "Ci prometti così che firmerai tu stesso la nostra iniziativa"
+                }
+            },
+            {
+                "value": 5,
+                "label": {
+                    "de": "5 Unterschriften",
+                    "fr": "à récolter 10 signature",
+                    "it": "5 firme"
+                },
+                "helper": {
+                    "de": "Du versprichst uns damit, dass du in deinem Umfeld 5 Unterschriften sammelst",
+                    "fr": "Tu nous promèts ainsi que tu récolteras 5 signatures dans ton entourage",
+                    "it": "Ci prometti così che raccoglierai 5 firme nel tuo ambiente"
+                },
+                "checked": true
+            },
+            {
+                "value": 20,
+                "label": {
+                    "de": "20 Unterschriften",
+                    "fr": "à récolter 20 signatures",
+                    "it": "20 firme"
+                },
+                "helper": {
+                    "de": "Du versprichst uns damit, dass du ungefähr 2 Stunden mit uns auf der Strasse Unterschriften sammelst",
+                    "fr": "Tu nous promèts ainsi que tu récolteras des signatures avec nous dans la rue pendant environ 2 heures",
+                    "it": "Ci prometti così che raccoglierai firme con noi per circa 2 ore per strada"
+                }
+            },
+            {
+                "value": 50,
+                "label": {
+                    "de": "50 Unterschriften",
+                    "fr": "à récolter 50 signatures",
+                    "it": "50 firme"
+                },
+                "helper": {
+                    "de": "Du bist ja genial! Du versprichst uns damit, dass du zwei Mal mit uns auf der Strasse Unterschriften sammelst",
+                    "fr": "Tu es génial! Tu nous promèts ainsi que tu récolteras des signatures avec nous dans la rue deux fois",
+                    "it": "Sei geniale! Ci prometti così che raccoglierai firme con noi per strada due volte"
+                }
+            }
+        ]
+    },
     "optin": {
         "de": "Ich bin damit einverstanden, dass die Allianz für ein Atomwaffenverbot mich über ihre Kampagnen und Aktionen informiert. Mehr dazu im <a href=\"https://atomwaffenverbot.ch/datenschutz/\" target=\"_blank\">Datenschutz</a>.",
         "fr": "Je consens à ce que l'Alliance pour l'interdiction des armes nucléaires m'informe sur ses campagnes et actions. Plus d'informations dans la <a href=\"https://gssa.ch/protection-de-donnees/\" target=\"_blank\">déclaration de protection des données</a>.",

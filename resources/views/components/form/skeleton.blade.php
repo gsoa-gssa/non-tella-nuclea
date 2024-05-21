@@ -16,6 +16,25 @@
             </div>
         @endif
         @csrf
+        <div class="petition-input-group petition-input-group__fullwidth petition-input-group__signatureCountFields p-4 bg-black text-accent">
+            <label for="{{$formID}}-signatureCount" class="!text-lg font-extrabold uppercase">{{config("petition")->signatureCountFields->label->{app()->getLocale()} }}</label>
+            <div class="petition-input-group__signatureCountFields__options">
+                @foreach(config("petition")->signatureCountFields->options as $option)
+                    <div class="petition-input-group__signatureCountFields__options__option">
+                        <input
+                            type="radio"
+                            name="data[signatureCount]"
+                            id="{{$formID}}-signatureCount-{{$option->value}}"
+                            value="{{$option->value}}"
+                            data-helper="{{ $option->helper->{app()->getLocale()} }}"
+                            @if(old("data.signatureCount") == $option->value) checked @endif
+                        >
+                        <label for="{{$formID}}-signatureCount-{{$option->value}}">{{$option->label->{app()->getLocale()} }}</label>
+                    </div>
+                @endforeach
+            </div>
+            <p class="text-[0.8rem] mt-4" id="pledge-helper">{{ config("petition")->signatureCountFields->default->{app()->getLocale()} }}</p>
+        </div>
         @foreach (config("petition")->datafields as $item)
             <x-dynamic-component :component="'form.input-'.$item->type" :item="$item" :formID="$formID" />
         @endforeach
@@ -66,6 +85,7 @@
         </div>
         <input type="hidden" name="configuration" value="{{config("petition")->key}}">
         <input type="hidden" name="data[locale]" value="{{app()->getLocale()}}">
+        <input type="hidden" name="data[stage]" value="pledge">
     </form>
 </div>
 

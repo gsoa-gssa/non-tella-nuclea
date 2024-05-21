@@ -55,3 +55,60 @@ html {
     background-color: theme("colors.highlight");
     color: theme("colors.black");
 }
+
+/** Disturber **/
+.pledge-disturber {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(var(--transy, -25%)) translateX(var(--transx, -50%)) rotate(var(--defrot, -20deg));
+
+    @apply bg-red-500 font-bold text-white p-2 md:text-4xl sm:text-3xl text-2xl leading-none;
+
+    @media screen and (max-width: 1180px) {
+        --transx: -10%;
+        --transy: -75%;
+        --defrot: -10deg;
+        --widrot: -5deg;
+    }
+
+    @media screen and (max-width: 860px) {
+        --transx: 0;
+        --transy: -100%;
+        --defrot: -0deg;
+        --widrot: -10deg;
+    }
+
+    // Add keyframe animation to wiggle every 2 seconds
+    animation: wiggle 2s infinite;
+
+    @keyframes wiggle {
+        0% {
+            transform: translateY(var(--transy, -25%)) translateX(var(--transx, -50%)) rotate(var(--defrot, -20deg));
+        }
+
+        10% {
+            transform: translateY(var(--transy, -25%)) translateX(var(--transx, -50%)) rotate(var(--widrot, -10deg));
+        }
+
+        20% {
+            transform: translateY(var(--transy, -25%)) translateX(var(--transx, -50%)) rotate(var(--defrot, -20deg));
+        }
+
+        30% {
+            transform: translateY(var(--transy, -25%)) translateX(var(--transx, -50%)) rotate(var(--widrot, -10deg));
+        }
+
+        40% {
+            transform: translateY(var(--transy, -25%)) translateX(var(--transx, -50%)) rotate(var(--defrot, -20deg));
+        }
+
+        50% {
+            transform: translateY(var(--transy, -25%)) translateX(var(--transx, -50%)) rotate(var(--widrot, -10deg));
+        }
+
+        60% {
+            transform: translateY(var(--transy, -25%)) translateX(var(--transx, -50%)) rotate(var(--defrot, -20deg));
+        }
+    }
+}

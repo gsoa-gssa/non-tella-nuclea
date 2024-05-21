@@ -18,6 +18,7 @@ class Supporter extends Model
     protected $fillable = [
         "uuid",
         "email",
+        "pledgeemail",
         "data",
         "email_verification_token",
         "email_verified_at",
@@ -38,7 +39,7 @@ class Supporter extends Model
      */
     public function sendEmailVerificationNotification()
     {
-        Mail::to($this->email)->send(new VerifyEmail($this));
+        Mail::to(isset($this->email) && $this->email !== $this->pledgeemail ? $this->email : $this->pledgeemail)->send(new VerifyEmail($this));
     }
 
     /**

@@ -175,7 +175,7 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
       <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
 
   <div style="font-size: 14px; line-height: 140%; text-align: left; word-wrap: break-word;">
-    <p style="line-height: 140%;">{!! __("<strong>Danke, dass du bei der Initiative für ein Atomwaffenverbot mitmachen willst! </strong>Bitte bestätige hier kurz deine E-Mail Adresse:</p>") !!}
+    <p style="line-height: 140%;">{!! __("emailverification.intro") !!}
   </div>
 
       </td>
@@ -208,7 +208,7 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
       <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
 
   <div style="font-size: 14px; line-height: 140%; text-align: left; word-wrap: break-word;">
-    <p style="line-height: 140%;">{!!__("<strong>Kannst du dir vorstellen, unsere Initiative mit einer Spende zu unterstützen?</strong> Wir wären dir dafür unendlich dankbar:</p>") !!}
+    <p style="line-height: 140%;">{!!__("emailverification.donation") !!}
   </div>
 
       </td>

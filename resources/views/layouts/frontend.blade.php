@@ -10,20 +10,20 @@
     <!-- Primary Meta Tags -->
     <title>{{__("Atomwaffenverbot jetzt! | SEI DABEI!")}}</title>
     <meta name="title" content="{{__("Atomwaffenverbot jetzt! | SEI DABEI!")}}" />
-    <meta name="description" content="{{__("Mit der Atomwaffenverbotsinitiative fordern wir den Bundesrat auf, dem Atomwaffenverbotsvertrag beizutreten und die humanitäre Verantwortung der Schweiz wahrnehmen. Sei dabei!")}}" />
+    <meta name="description" content="{{__("pledge.lead")}}" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{url("")}}" />
     <meta property="og:title" content="{{__("Atomwaffenverbot jetzt! | SEI DABEI!")}}" />
-    <meta property="og:description" content="{{__("Mit der Atomwaffenverbotsinitiative fordern wir den Bundesrat auf, dem Atomwaffenverbotsvertrag beizutreten und die humanitäre Verantwortung der Schweiz wahrnehmen. Sei dabei!")}}" />
+    <meta property="og:description" content="{{__("pledge.lead")}}" />
     <meta property="og:image" content="{{url("images/og/og_{$locale}.png")}}" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="{{url("")}}" />
     <meta property="twitter:title" content="{{__("Atomwaffenverbot jetzt! | SEI DABEI!")}}" />
-    <meta property="twitter:description" content="{{__("Mit der Atomwaffenverbotsinitiative fordern wir den Bundesrat auf, dem Atomwaffenverbotsvertrag beizutreten und die humanitäre Verantwortung der Schweiz wahrnehmen. Sei dabei!")}}" />
+    <meta property="twitter:description" content="{{__("pledge.lead")}}" />
     <meta property="twitter:image" content="{{url("images/og/og_{$locale}.png")}}" />
 
     <!-- Meta Tags Generated with https://metatags.io -->

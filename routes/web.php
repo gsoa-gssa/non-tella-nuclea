@@ -16,12 +16,15 @@ use App\Http\Controllers\SupporterController;
 */
 
 Route::get('/', function () {
-    $suppCount = \App\Models\Supporter::count();
+    $suppCount = \App\Models\Supporter::whereJsonContains("data->stage", "pledge")->count();
     $suppCount = floor(max((76 - $suppCount / 3), 0) + $suppCount);
-    $signatures_from_wecollect = Storage::get('signatures/wecollect.txt');
-    $suppCount += $signatures_from_wecollect;
-    return view("landing.default", compact("suppCount"));
+    $signatureCount = \App\Models\Supporter::whereJsonContains("data->stage", "pledge")->sum("data->signatureCount");
+    $signatureCount = floor(max((100 - $signatureCount / 3), 0) + $signatureCount);
+    $signaturePercentage = $signatureCount / 20000 * 100;
+    return view("landing.default", compact("suppCount", "signatureCount", "signaturePercentage"));
 });
+
+Route::get("/directsign", [SupporterController::class, "directSign"]);
 
 Route::get("/{danke}", function() {
     $supporter = request()->session()->get("supporter");
@@ -61,6 +64,11 @@ if (env("APP_ENV") === "local") {
         }
         return view("emails.verify-email", compact("supporter"));
     })->name("email-preview");
+
+    Route::get("/thanks-preview", function() {
+        $supporter = \App\Models\Supporter::first();
+        return view("thanks/direct-sign", compact("supporter"));
+    })->name("thanks-preview");
 }
 
 require __DIR__.'/admin.php';

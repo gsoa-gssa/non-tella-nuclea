@@ -24,7 +24,7 @@
                     options.defaults['stored_customer_firstname'] = '{{$supporter->data["firstname"]}}';
                     options.defaults['stored_customer_lastname'] = '{{$supporter->data["lastname"]}}';
                     options.defaults['stored_customer_email'] = '{{$supporter->email}}';
-                    options.defaults['stored_customer_zip_code'] = '{{$supporter->data["zip"]}}';
+                    options.defaults['stored_customer_zip_code'] = '{{$supporter->data["zip"] ?? ""}}';
                     options.defaults['stored_customer_uuid'] = '{{$supporter->uuid}}';
                 };
                 </script>

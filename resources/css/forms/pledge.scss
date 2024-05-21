@@ -1,0 +1,35 @@
+.petition-input-group {
+
+    &__signatureCountFields {
+        &__options {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            @apply gap-3 md:gap-4 mt-4;
+
+            &__option {
+                input[type="radio"] {
+                    display: none;
+                }
+
+                label {
+                    display: block;
+                    font-size: clamp(22px, 1.5rem, 24px) !important;
+                    @apply bg-accent p-2 uppercase font-extrabold text-black text-center cursor-pointer;
+                }
+            }
+
+            &:has(input[type="radio"]:checked) {
+                .petition-input-group__signatureCountFields__options__option {
+                    opacity: 0.5;
+                    filter: grayscale(1) blur(2px);
+                    transition: filter 0.25s, opacity 0.25s;
+
+                    &:has(input[type="radio"]:checked) {
+                        opacity: 1;
+                        filter: none;
+                    }
+                }
+            }
+        }
+    }
+}

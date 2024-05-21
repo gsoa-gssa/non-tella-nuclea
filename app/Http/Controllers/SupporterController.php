@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Configuration;
 use App\Models\Supporter;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use App\Models\Configuration;
+use Illuminate\Support\Facades\Validator;
 
 class SupporterController extends Controller
 {
@@ -34,7 +35,7 @@ class SupporterController extends Controller
          * Validate the request.
          */
         $validated = $request->validate([
-            "email" => "required|email|unique:supporters,email",
+            "email" => "required|email|unique:supporters,pledgeemail",
             "data" => "required|array",
             "configuration" => "exists:configurations,key",
             "optin" => "boolean",
@@ -52,9 +53,14 @@ class SupporterController extends Controller
          */
         $supporter = Supporter::create([
             "uuid" => Str::uuid(),
-            "email" => $validated["email"],
+            "pledgeemail" => $validated["email"],
             "email_verification_token" => Str::random(32),
         ]);
+
+        /**
+         * Remove the email from the data array.
+         */
+        unset($validated["email"]);
 
         $supporter->fill($validated);
 
@@ -135,5 +141,39 @@ class SupporterController extends Controller
             case "xlsx":
                 return Supporter::exportToXlsx($supporters, $filename);
         }
+    }
+
+    /**
+     * Allow direct signing through a link.
+     */
+    public function directSign(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            "email" => "required|email|unique:supporters,pledgeemail",
+            "data" => "required|array",
+            "configuration" => "",
+            "optin" => "boolean",
+            "data.locale" => "required",
+            "public" => "boolean"
+        ], [
+            "email.required" => __("email is required"),
+            "email.email" => __("email is invalid"),
+            "email.unique" => __("email is already in use"),
+            "data.required" => __("data is required"),
+            "data.array" => __("data is invalid"),
+            "data.locale.required" => __("locale is required"),
+        ]);
+        if ($validator->fails()) {
+            return response()->json($validator->errors(), 400);
+            die;
+        }
+        $supporter = Supporter::create([
+            "uuid" => Str::uuid(),
+            "pledgeemail" => $request->email,
+            "email_verification_token" => Str::random(32),
+            "data" => [...$request->data, "stage" => "pledge"],
+        ]);
+
+        return view("thanks/direct-sign", ["supporter" => $supporter]);
     }
 }
