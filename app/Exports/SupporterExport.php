@@ -25,7 +25,7 @@ class SupporterExport implements FromCollection, WithHeadings
 
     public function headings(): array
     {
-        $headings = ["id", "created_at", "updated_at", "deleted_at", "uuid", "email", "email_verification_token", "email_verified_at", "public", "configuration", "optin"];
+        $headings = ["id", "created_at", "updated_at", "deleted_at", "uuid", "email", "pledgeemail", "email_verification_token", "email_verified_at", "public", "configuration", "optin"];
         $dataFields = Supporter::findDataFields();
         return array_merge($headings, $dataFields);
     }
