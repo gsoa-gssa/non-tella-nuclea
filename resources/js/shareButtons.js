@@ -10,7 +10,7 @@ window.addEventListener("click", function (e) {
             window.open("https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(shareUrl));
             break;
         case "twitter":
-            window.open("https://twitter.com/intent/tweet?url=" + encodeURIComponent(shareUrl) + "&text=" + encodeURIComponent(shareText));
+            window.open("https://twitter.com/intent/tweet?url=" + encodeURIComponent(shareUrl));
             break;
         case "whatsapp":
             window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent(shareText + "\n" + shareUrl));
