@@ -16,7 +16,7 @@ window.addEventListener("click", function (e) {
             window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent(shareText + "\n" + shareUrl));
             break;
         case "telegram":
-            window.open("https://t.me/share/url?url=" + encodeURIComponent(shareUrl) + "&text=" + encodeURIComponent(shareText));
+            window.open("https://t.me/share/url?url=" + encodeURIComponent(shareUrl));
             break;
         case "email":
             window.location.href = "mailto:?subject=''&body=" + encodeURIComponent(shareText + "\n" + shareUrl);
