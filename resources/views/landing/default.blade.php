@@ -15,7 +15,7 @@
                 <x-disturber />
                 <div class="tp-petition-cta__container__inner__content">
                     <p class="text-3xl font-bold">{{__("pledge.lead")}}</p>
-                    <p class="font-xl mt-2">{{__("Schon :count Personen unterstützen uns!", ["count" => $suppCount])}}</p>
+                    <p class="font-xl mt-2">{{__("counter", ["count" => $suppCount, "signcount" => $signatureCount])}}</p>
                     <x-progressBar.bar :signatureCount="$signatureCount" :signaturePercentage="$signaturePercentage" />
                     <div class="mt-2 md:mt-4">
                         <x-form />
