@@ -167,13 +167,25 @@ class SupporterController extends Controller
             return response()->json($validator->errors(), 400);
             die;
         }
-        $supporter = Supporter::create([
-            "uuid" => Str::uuid(),
-            "pledgeemail" => $request->email,
-            "email_verification_token" => Str::random(32),
-            "data" => [...$request->data, "stage" => "pledge"],
-        ]);
 
-        return view("thanks/direct-sign", ["supporter" => $supporter]);
+        // Find supporter by email
+        $supporter = Supporter::where("pledgeemail", $request->email)->first();
+        if ($supporter && $supporter->data["signatureCount"] == $request->data["signatureCount"]) {
+            return view("thanks/direct-sign", ["supporter" => $supporter]);
+        } else if ($supporter) {
+            $supporter->data = $request->data;
+            $supporter->save();
+            return view("thanks/direct-sign", ["supporter" => $supporter]);
+        } else {
+            $supporter = Supporter::create([
+                "uuid" => Str::uuid(),
+                "pledgeemail" => $request->email,
+                "email_verification_token" => Str::random(32),
+                "data" => [...$request->data, "stage" => "pledge", "method" => "direct-sign"],
+            ]);
+
+            return view("thanks/direct-sign", ["supporter" => $supporter]);
+        }
+
     }
 }
