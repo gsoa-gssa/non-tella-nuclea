@@ -1,7 +1,7 @@
 {
-    "disturber": "Promets maintenant tes signatures !",
-    "directsign-thanks.title": "Merci pour votre signature !",
-    "directsign-thanks.description": "Vous venez de promettre votre signature pour l'initiative sur l'interdiction des armes nucléaires. Merci beaucoup pour votre soutien !",
+    "disturber": "Promettez maintenant vos signatures !",
+    "directsign-thanks.title": "Merci pour votre soutiens !",
+    "directsign-thanks.description": "Vous venez de donner votre soutiens pour l'initiative sur l'interdiction des armes nucléaires. Merci beaucoup !",
     ":amount SPENDEN": "Je fais un don de :amount",
     "/spenden": "/fair-un-don",
     "emailverification.intro": "<strong>Nous vous remercions chaleureusement de vous engager pour cette récolte de signatures pour l'initiative sur l'interdiction des armes nucléaires !</strong> Merci de confirmer brièvement votre adresse e-mail ici :",

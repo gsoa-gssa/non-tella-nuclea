@@ -1,7 +1,7 @@
 {
     "disturber": "Firma ora!",
-    "directsign-thanks.title": "Grazie per la tua firma!",
-    "directsign-thanks.description": "Hai appena promesso la tua firma per l'iniziativa di divieto delle armi nucleari. Grazie di cuore per il tuo sostegno!",
+    "directsign-thanks.title": "Grazie per il tuo sostegno!",
+    "directsign-thanks.description": "Hai appena promesso il tuo sostegno per l'iniziativa di divieto delle armi nucleari. Grazie di cuore!",
     ":amount SPENDEN": "DONA :amount",
     "/spenden": "/donare",
     "emailverification.intro": "<strong>Grazie per aver deciso di partecipare all'iniziativa per il divieto delle armi nucleari! </strong>Per favore conferma qui velocemente il tuo indirizzo email:</p>",
