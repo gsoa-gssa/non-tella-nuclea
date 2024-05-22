@@ -170,10 +170,8 @@ class SupporterController extends Controller
 
         // Find supporter by email
         $supporter = Supporter::where("pledgeemail", $request->email)->first();
-        if ($supporter && $supporter->data["signatureCount"] == $request->data["signatureCount"]) {
-            return view("thanks/direct-sign", ["supporter" => $supporter]);
-        } else if ($supporter) {
-            $supporter->data = $request->data;
+        if ($supporter) {
+            $supporter->data = [...$request->data, "stage" => "pledge", "method" => "direct-sign"];
             $supporter->save();
             return view("thanks/direct-sign", ["supporter" => $supporter]);
         } else {
