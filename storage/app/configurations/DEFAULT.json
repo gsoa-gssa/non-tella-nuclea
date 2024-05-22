@@ -3,7 +3,7 @@
     "langsetting": "domainbased",
     "domains": {
         "tpnw.ddev.site": {
-            "locale": "it"
+            "locale": "de"
         },
         "jetzt.atomwaffenverbot.ch": {
             "locale": "de"
