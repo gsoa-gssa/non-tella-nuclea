@@ -149,7 +149,7 @@ class SupporterController extends Controller
     public function directSign(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            "email" => "required|email|unique:supporters,pledgeemail",
+            "email" => "required|email",
             "data" => "required|array",
             "configuration" => "",
             "optin" => "boolean",
