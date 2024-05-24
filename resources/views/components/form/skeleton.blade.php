@@ -26,6 +26,7 @@
                             name="data[signatureCount]"
                             id="{{$formID}}-signatureCount-{{$option->value}}"
                             value="{{$option->value}}"
+                            required
                             data-helper="{{ $option->helper->{app()->getLocale()} }}"
                             @if(old("data.signatureCount") == $option->value) checked @endif
                         >

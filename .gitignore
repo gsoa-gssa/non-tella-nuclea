@@ -1,5 +1,6 @@
 .DS_Store
 **/.DS_Store
+/stats/data*
 /.phpunit.cache
 /node_modules
 /public/hot
