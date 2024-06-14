@@ -1,4 +1,4 @@
-<div class="petition-share mt-6 gap-2 bg-accent p-4 md:p-6">
+<div class="petition-share mt-6 gap-2 bg-accent p-4 md:p-6" id="share">
     <h2 class="tpnw-title text-center text-3xl md:text-5xl text-black mb-4 md:mb-6">{{__("Teile unser Anliegen!")}}</h2>
     <div class="petition-share__grid grid md:grid-cols-2 gap-2">
         <input
