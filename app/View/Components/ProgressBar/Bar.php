@@ -4,20 +4,22 @@ namespace App\View\Components\ProgressBar;
 
 use Closure;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Facades\Http;
 use Illuminate\View\Component;
 
 class Bar extends Component
 {
-    public $signatureCount;
-    public $signaturePercentage;
+    public $donationAmount;
+    public $donationPercent;
     /**
      * Create a new component instance.
      */
-    public function __construct($signatureCount, $signaturePercentage)
+    public function __construct($donationAmount, $donationPercent)
     {
-        $this->signatureCount = $signatureCount;
-        $this->signaturePercentage = $signaturePercentage;
+        $this->donationAmount = $donationAmount;
+        $this->donationPercent = $donationPercent;
     }
+
 
     /**
      * Get the view / contents that represent the component.

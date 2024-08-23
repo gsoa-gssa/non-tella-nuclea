@@ -9,31 +9,70 @@
         </div>
     </div>
 
-    <div class="tpnw-petition-cta -mt-8 md:-mt-12 lg:-mt-16">
+    <div class="tpnw-petition-cta -mt-14 md:-mt-16 lg:-mt-24">
         <div class="tpnw-petition-cta__container px-2 md:px-4">
             <div class="tpnw-petition__container__inner max-w-[793px] mx-auto bg-white p-4 md:p-8 lg:p-10 relative">
-                <x-disturber />
                 <div class="tp-petition-cta__container__inner__content">
                     <p class="text-3xl font-bold">{{__("pledge.lead")}}</p>
-                    <p class="font-xl mt-2">{{__("counter", ["count" => $suppCount, "signcount" => $signatureCount])}}</p>
-                    <x-progressBar.bar :signatureCount="$signatureCount" :signaturePercentage="$signaturePercentage" />
-                    <div class="mt-2 md:mt-4">
-                        <x-form />
+                    <x-progressBar.bar :donationAmount="$rnw->sum" :donationPercent="$rnw->percentage"/>
+                    <p class="text-2xl mt-6">{!!__("pledge.lead.cta")!!}</p>
+                    <div class="mt-6">
+                        <a href="/fundraising?rnw-amount=10000" class="w-full flex justify-center items-center font-bold uppercase bg-black text-accent text-2xl md:text-3xl py-1 px-6">
+                            {{__("pledge.lead.button")}}
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="tpnw-petition-text px-2 md:px-4 py-8">
-        <div class="tpnw-petition-text__content max-w-[793px] mx-auto text-white text-2xl">
-            {!!
-                view("text." . app()->getLocale())
-            !!}
-            <div class="mt-12">
-                <h2 class="tpnw-title text-xl md:text-2xl lg:text-3xl">{{__("Allianz Mitglieder:")}}</h2>
-                <x-supporter-organisations />
+    <div class="tpnw-petition-text px-2 md:px-4 pt-8 text-white">
+        <div class="tpnw-petition-text__content max-w-[793px] mx-auto text-2xl">
+            {!! __("content.para.1") !!}
+        </div>
+    </div>
+    <div class="tpnw-petition-text text-white">
+        <div class="tpnw-petition-text__mockup__wrapper mt-12 md:mt-16">
+            <div class="tpnw-petition-text__mockup max-w-[1038px] mx-auto px-4 md:px-8">
+                <img src="{{asset('images/mockup_tagi.png')}}" alt="Landing Mockup" class="w-full" />
             </div>
         </div>
+        <div class="tpnw-petition-text__mockup__description max-w-[1038px] mx-auto mt-2 px-4 md:px-8">
+            <p class="text-sm">{!! __("content.imagedesc", ["missing" => number_format($rnw->missing, 0, ",", "'")]) !!}</p>
+        </div>
+    </div>
+    <div class="tpnw-petition-text px-2 md:px-4 text-white">
+        <div class="tpnw-petition-text__content max-w-[793px] mx-auto text-2xl mt-12 md:mt-16">
+            {!! __("content.para.2") !!}
+        </div>
+        <div class="tpnw-petition-text__content max-w-[793px] mx-auto my-12">
+            <a href="/fundraising" class="w-fit mx-auto flex justify-center items-center font-bold uppercase bg-accent text-black text-2xl md:text-3xl py-1 px-6">
+                {{__("content.buttons.1")}}
+            </a>
+        </div>
+        <div class="tpnw-petition-text__content max-w-[793px] mx-auto text-2xl">
+            {!! __("content.para.3") !!}
+        </div>
+        <div class="tpnw-petition-text__content max-w-[793px] mx-auto mt-8 mb-20 md:mb-40">
+            <div class="grid md:grid-cols-2 gap-x-6 gap-y-4">
+                <a href="/fundraising?rnw-amount=2500" class="w-full mx-auto flex justify-center items-center font-bold uppercase bg-accent text-black text-2xl py-1 px-6">
+                    {{__("content.buttons.25")}}
+                </a>
+                <a href="/fundraising?rnw-amount=5000" class="w-full mx-auto flex justify-center items-center font-bold uppercase bg-accent text-black text-2xl py-1 px-6">
+                    {{__("content.buttons.50")}}
+                </a>
+                <a href="/fundraising?rnw-amount=10000" class="w-full mx-auto flex justify-center items-center font-bold uppercase bg-accent text-black text-2xl py-1 px-6">
+                    {{__("content.buttons.100")}}
+                </a>
+                <a href="/fundraising?rnw-amount=25000" class="w-full mx-auto flex justify-center items-center font-bold uppercase bg-accent text-black text-2xl py-1 px-6">
+                    {{__("content.buttons.250")}}
+                </a>
+                <a href="/fundraising" class="w-full mx-auto flex justify-center items-center font-bold uppercase bg-highlight text-white text-2xl py-1 px-6">
+                    {{__("content.buttons.share.whatsapp")}}
+                </a>
+                <a href="/fundraising" class="w-full mx-auto flex justify-center items-center font-bold uppercase bg-highlight text-white text-2xl py-1 px-6">
+                    {{__("content.buttons.share.email")}}
+                </a>
+            </div>
     </div>
 </x-frontend>

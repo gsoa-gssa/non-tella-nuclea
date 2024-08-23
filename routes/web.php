@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\SupporterController;
+use App\Models\Rnw;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,12 +16,15 @@ use App\Http\Controllers\SupporterController;
 */
 
 Route::get('/', function () {
-    $suppCount = \App\Models\Supporter::whereJsonContains("data->stage", "pledge")->count();
-    $suppCount = floor(max((76 - $suppCount / 3), 0) + $suppCount);
-    $signatureCount = \App\Models\Supporter::whereJsonContains("data->stage", "pledge")->sum("data->signatureCount");
-    $signatureCount = floor(max((100 - $signatureCount / 3), 0) + $signatureCount);
-    $signaturePercentage = $signatureCount / 20000 * 100;
-    return view("landing.default", compact("suppCount", "signatureCount", "signaturePercentage"));
+    $rnw = new Rnw();
+    $rnw->getSum();
+    return view("landing.default", compact("rnw"));
+});
+
+Route::get('/fundraising', function () {
+    $rnw = new Rnw();
+    $rnw->getSum();
+    return view("landing.fundraising", compact("rnw"));
 });
 
 Route::get("/directsign", [SupporterController::class, "directSign"]);
