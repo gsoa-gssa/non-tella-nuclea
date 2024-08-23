@@ -1,6 +1,6 @@
 {
   "resources/css/app.scss": {
-    "file": "assets/app-DM7TpKja.css",
+    "file": "assets/app-B4Wdhfnw.css",
     "src": "resources/css/app.scss",
     "isEntry": true
   },
@@ -57,7 +57,7 @@
     "src": "resources/fonts/uniform/UniformExtraCondensedUltra/font.woff2"
   },
   "resources/js/app.js": {
-    "file": "assets/app-CsLZuUvg.js",
+    "file": "assets/app-DoTe6EpD.js",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
