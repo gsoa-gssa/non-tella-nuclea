@@ -3,7 +3,7 @@
         <h1 class="tpnw-title text-center text-3xl md:text-4xl lg:text-5xl">{{__("Unterstütze uns mit deiner Spende!")}}</h1>
     </div>
     <div class="tpnw-petition-text px-2 md:px-4 py-8">
-        <div class="tpnw-petition-text__content max-w-[793px] mx-auto text-white text-2xl">
+        <div class="tpnw-petition-text__content max-w-[690px] mx-auto text-white text-2xl">
             <p class="mt-4">{{__("Deine Spende hilft uns, unsere Arbeit für eine friedlichere Welt fortzusetzen.")}}</p>
             <div class="tpnw-petition-text__content__donate bg-white mt-16 p-4 md:p-6 text-black">
                 @php

@@ -11,9 +11,9 @@
 
     <div class="tpnw-petition-cta -mt-14 md:-mt-16 lg:-mt-24">
         <div class="tpnw-petition-cta__container px-2 md:px-4">
-            <div class="tpnw-petition__container__inner max-w-[793px] mx-auto bg-white p-4 md:p-8 lg:p-10 relative">
+            <div class="tpnw-petition__container__inner max-w-[690px] mx-auto bg-white p-4 md:p-8 lg:p-10 relative">
+                <p class="text-3xl font-bold mb-4">{{__("fundraising.thanks")}}</p>
                 <x-progressBar.bar :donationAmount="$rnw->sum" :donationPercent="$rnw->percentage"/>
-                <p class="text-3xl font-bold mt-4">{{__("fundraising.thanks")}}</p>
                 @php
                     $availableLanguages = ["de", "fr"];
                     $language = in_array(app()->getLocale(), $availableLanguages) ? app()->getLocale() : "fr";

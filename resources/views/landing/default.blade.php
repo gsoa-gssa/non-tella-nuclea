@@ -1,7 +1,7 @@
 <x-frontend>
 
     <div class="tpnw-petition-header bg-accent">
-            <div class="tpnw-petition-header__inner px-4 pt-8 md:pt-12 lg:pt-20 pb-24 md:pb-28 lg:pb-36  w-fit mx-auto max-w-7xl sm:px-6 lg:px-8 py-6">
+            <div class="tpnw-petition-header__inner px-4 pt-4 md:pt-8 lg:pt-12 pb-18 md:pb-24 lg:pb-28  w-fit mx-auto max-w-7xl sm:px-6 lg:px-8 py-6">
                 <x-petition-icon class="max-w-[369px] w-full mb-2 mx-auto" />
                 <h2 class="text-center text-xl md:text-2xl lg:text-3xl">{{__("visual.subtitle")}}</h2>
                 <h1 class="tpnw-title text-center text-3xl md:text-4xl lg:text-5xl">{{__("Atomwaffenverbot jetzt!")}}</h1>
@@ -9,17 +9,20 @@
         </div>
     </div>
 
-    <div class="tpnw-petition-cta -mt-14 md:-mt-16 lg:-mt-24">
+    <div class="tpnw-petition-cta -mt-14 md:-mt-16 lg:-mt-20">
         <div class="tpnw-petition-cta__container px-2 md:px-4">
-            <div class="tpnw-petition__container__inner max-w-[793px] mx-auto bg-white p-4 md:p-8 lg:p-10 relative">
-                <div class="tp-petition-cta__container__inner__content">
-                    <p class="text-3xl font-bold">{{__("pledge.lead")}}</p>
-                    <x-progressBar.bar :donationAmount="$rnw->sum" :donationPercent="$rnw->percentage"/>
-                    <p class="text-2xl mt-6">{!!__("pledge.lead.cta")!!}</p>
-                    <div class="mt-6">
-                        <a href="/fundraising?rnw-amount=10000" class="w-full flex justify-center items-center font-bold uppercase bg-black text-accent text-2xl md:text-3xl py-1 px-6">
-                            {{__("pledge.lead.button")}}
-                        </a>
+            <div class="tpnw-petition__container__inner max-w-[690px] mx-auto bg-white relative">
+                <img src="{{asset('images/mockup_tagi_header.png')}}" alt="Landing Mockup" class="w-full" />
+                <div class="p-4 md:p-6">
+                    <div class="tp-petition-cta__container__inner__content">
+                        <p class="text-3xl font-bold">{{__("pledge.lead")}}</p>
+                        <x-progressBar.bar :donationAmount="$rnw->sum" :donationPercent="$rnw->percentage"/>
+                        <p class="text-2xl mt-6">{!!__("pledge.lead.cta")!!}</p>
+                        <div class="mt-6">
+                            <a href="/fundraising?rnw-amount=10000" class="w-full flex justify-center items-center font-bold uppercase bg-black text-accent text-2xl md:text-3xl py-1 px-6">
+                                {{__("pledge.lead.button")}}
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -27,11 +30,11 @@
     </div>
 
     <div class="tpnw-petition-text px-2 md:px-4 pt-8 text-white">
-        <div class="tpnw-petition-text__content max-w-[793px] mx-auto text-2xl">
+        <div class="tpnw-petition-text__content max-w-[690px] mx-auto text-2xl">
             {!! __("content.para.1") !!}
         </div>
     </div>
-    <div class="tpnw-petition-text text-white">
+    {{-- <div class="tpnw-petition-text text-white">
         <div class="tpnw-petition-text__mockup__wrapper mt-12 md:mt-16">
             <div class="tpnw-petition-text__mockup max-w-[1038px] mx-auto px-4 md:px-8">
                 <img src="{{asset('images/mockup_tagi.png')}}" alt="Landing Mockup" class="w-full" />
@@ -40,21 +43,21 @@
         <div class="tpnw-petition-text__mockup__description max-w-[1038px] mx-auto mt-2 px-4 md:px-8">
             <p class="text-sm">{!! __("content.imagedesc", ["missing" => number_format($rnw->missing, 0, ",", "'")]) !!}</p>
         </div>
-    </div>
+    </div> --}}
     <div class="tpnw-petition-text px-2 md:px-4 text-white">
-        <div class="tpnw-petition-text__content max-w-[793px] mx-auto text-2xl mt-12 md:mt-16">
+        <div class="tpnw-petition-text__content max-w-[690px] mx-auto text-2xl mt-4">
             {!! __("content.para.2") !!}
         </div>
-        <div class="tpnw-petition-text__content max-w-[793px] mx-auto my-12">
+        <div class="tpnw-petition-text__content max-w-[690px] mx-auto my-6 md:my-12">
             <a href="/fundraising" class="w-fit mx-auto flex justify-center items-center font-bold uppercase bg-accent text-black text-2xl md:text-3xl py-1 px-6">
                 {{__("content.buttons.1")}}
             </a>
         </div>
-        <div class="tpnw-petition-text__content max-w-[793px] mx-auto text-2xl">
+        <div class="tpnw-petition-text__content max-w-[690px] mx-auto text-2xl">
             {!! __("content.para.3") !!}
         </div>
-        <div class="tpnw-petition-text__content max-w-[793px] mx-auto mt-8 mb-20 md:mb-40">
-            <div class="grid md:grid-cols-2 gap-x-6 gap-y-4">
+        <div class="tpnw-petition-text__content max-w-[690px] mx-auto mt-8 mb-20 md:mb-40">
+            <div class="grid md:grid-cols-2 gap-x-4 gap-y-4">
                 <a href="/fundraising?rnw-amount=2500" class="w-full mx-auto flex justify-center items-center font-bold uppercase bg-accent text-black text-2xl py-1 px-6">
                     {{__("content.buttons.25")}}
                 </a>

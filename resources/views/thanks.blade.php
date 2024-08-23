@@ -3,7 +3,7 @@
         <h1 class="tpnw-title text-center text-3xl md:text-4xl lg:text-5xl">{{__("Danke, :name!", ["name" => $supporter->data["firstname"]])}}</h1>
     </div>
     <div class="tpnw-petition-text px-2 md:px-4 py-8">
-        <div class="tpnw-petition-text__content max-w-[793px] mx-auto text-white text-2xl">
+        <div class="tpnw-petition-text__content max-w-[690px] mx-auto text-white text-2xl">
             {!!
                 view("thanks." . app()->getLocale())
             !!}
