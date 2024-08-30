@@ -25,9 +25,8 @@ class Rnw extends Model
         }
         if($this->sum > 25000) {
             $this->sum = 25000;
-        } elseif ($this->sum < 1312) {
-            $this->sum = 1312;
         }
+        $this->sum = floor(max((1312 - $this->sum / 3), 0) + $this->sum);
         $this->percentage = $this->sum / 25000 * 100;
         $this->missing = 25000 - $this->sum;
     }
