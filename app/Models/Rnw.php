@@ -15,18 +15,6 @@ class Rnw extends Model
 
     public function getSum()
     {
-        $apiResponse = $this->getTransactions();
-        $this->sumTransactions($apiResponse["result"]["transactions"]);
-        if ($apiResponse["result"]["additional_info"]["total_pages"] > 1) {
-            for ($i = 2; $i <= $apiResponse["result"]["additional_info"]["total_pages"]; $i++) {
-                $apiResponse = $this->getTransactions($i);
-                $this->sumTransactions($apiResponse["result"]["transactions"]);
-            }
-        }
-        if($this->sum > 25000) {
-            $this->sum = 25000;
-        }
-        $this->sum = floor(max((1312 - $this->sum / 3), 0) + $this->sum);
         $this->sum = 9876;
         $this->percentage = $this->sum / 25000 * 100;
         $this->missing = 25000 - $this->sum;
